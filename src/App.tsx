@@ -28,8 +28,14 @@ export function App() {
       <Modal
         isOpen={isNewTransaction}
         onRequestClose={handleCloseNewTransactionModal}
+        overlayClassName='react-modal-overlay'
+        className='react-modal-content'
       >
-        <h1>Testando</h1>
+        <h1>Cadastrar transação</h1>
+        <input type="text" placeholder="Título" />
+        <input type="text" placeholder="Preço" />
+        <input type="text" placeholder="Categoria" />
+
       </Modal >
 
     </>
