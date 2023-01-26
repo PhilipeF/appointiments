@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
  }
 
 
- .btnCloseModal {
+ .react-modal-close {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;

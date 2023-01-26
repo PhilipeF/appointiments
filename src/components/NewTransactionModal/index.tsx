@@ -18,7 +18,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionsP
             <button
                 type="button"
                 onClick={onRequestClose}
-                className='btnCloseModal'
+                className='react-modal-close'
             >
                 <img src={closeImg} alt="Fechar Modal" />
             </button>
