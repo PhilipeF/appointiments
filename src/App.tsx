@@ -6,7 +6,7 @@ import { GlobalStyle } from "./styles/global";
 
 export function App() {
 
-  const [isNewTransaction, setIsNewTransaction] = useState(false)
+  const [isNewTransactionn, setIsNewTransaction] = useState(false)
 
   function handleOpenNewTransactionModal() {
     setIsNewTransaction(true)
@@ -21,7 +21,7 @@ export function App() {
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
       <NewTransactionModal
-        isOpen={isNewTransaction}
+        isOpen={isNewTransactionn}
         onRequestClose={handleCloseNewTransactionModal}
       />
       <GlobalStyle />
