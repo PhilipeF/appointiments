@@ -19,6 +19,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionsP
                 <input type="text" placeholder="Título" />
                 <input type="text" placeholder="Preço" />
                 <input type="text" placeholder="Categoria" />
+                <button type="submit">Cadastrar</button>
             </Container>
 
         </Modal >
