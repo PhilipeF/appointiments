@@ -3,9 +3,18 @@ import { api } from "../../services/api";
 import { Container } from "./style";
 
 
+interface TrasactionProps {
+    id: number;
+    title: string;
+    type: string;
+    amount: number;
+    category: string;
+    createdAt: string;
+}
+
 export function TransactionTable() {
 
-    const [transactions, setTransactions] = useState([])
+    const [transactions, setTransactions] = useState<TrasactionProps[]>([])
 
     useEffect(() => {
         api.get('/transactions')
@@ -25,30 +34,14 @@ export function TransactionTable() {
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>Desenvolvimento de site</td>
-                        <td className="deposit">R$ 12.000,00</td>
-                        <td>Venda</td>
-                        <td>17/02/2023</td>
-                    </tr>
-                    <tr>
-                        <td>Academia</td>
-                        <td className="withdrawn">- R$ 100,00</td>
-                        <td>Saúde</td>
-                        <td>15/02/2023</td>
-                    </tr>
-                    <tr>
-                        <td>Aluguel de Apartamento</td>
-                        <td className="withdrawn">- R$ 1.200,00</td>
-                        <td>Moradia</td>
-                        <td>10/02/2023</td>
-                    </tr>
-                    <tr>
-                        <td>Venda do Monitor Antigo</td>
-                        <td className="deposit">R$ 500,00</td>
-                        <td>Venda</td>
-                        <td>10/02/2023</td>
-                    </tr>
+                    {transactions.map(transaction =>
+                        <tr key={transaction.id}>
+                            <td>{transaction.title}</td>
+                            <td className={transaction.type}>{transaction.amount}</td>
+                            <td>{transaction.category}</td>
+                            <td>{transaction.createdAt}</td>
+                        </tr>
+                    )}
                 </tbody>
             </table>
         </Container>
