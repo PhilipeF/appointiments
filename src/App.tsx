@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 import { NewTransactionModal } from "./components/NewTransactionModal";
+import { TransactionContext } from "./contexto";
 import { GlobalStyle } from "./styles/global";
 
 export function App() {
@@ -18,12 +19,17 @@ export function App() {
 
   return (
     <>
-      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
-      <Dashboard />
-      <NewTransactionModal
-        isOpen={isNewTransaction}
-        onRequestClose={handleCloseNewTransactionModal}
-      />
+      <TransactionContext.Provider value={'Testando'}>
+
+        <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+        <Dashboard />
+        <NewTransactionModal
+          isOpen={isNewTransaction}
+          onRequestClose={handleCloseNewTransactionModal}
+        />
+
+      </TransactionContext.Provider>
+
       <GlobalStyle />
 
     </>
