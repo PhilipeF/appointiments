@@ -20,7 +20,7 @@ Foi possível aprender e praticar de forma de objetiva e clara a elevação de e
 
 - [ReactJS](https://kinsta.com/pt/base-de-conhecimento/o-que-e-javascript/#vanilla-javascript): React é uma biblioteca JavaScript front-end gratuita e de código aberto para criar interfaces de usuário com base em componentes de interface do usuário. É mantido pela Meta e uma comunidade de desenvolvedores e empresas individuais.
 
-- [Mirage](https://miragejs.com/): Mirage é uma biblioteca JavaScript que permite que desenvolvedores de front-end simulem APIs de back-end. 
+- [MirageJS](https://miragejs.com/): Mirage é uma biblioteca JavaScript que permite que desenvolvedores de front-end simulem APIs de back-end. 
 Ao contrário de outras bibliotecas simuladas, o Mirage facilita a recriação de cenários dinâmicos, do tipo que normalmente só é possível ao usar um servidor de produção real.
 
  
